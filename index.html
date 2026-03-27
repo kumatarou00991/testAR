@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <!-- model-viewerの読み込み -->
+    <script type="module" src="https://ajax.googleapis.com"></script>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; }
+        model-viewer { width: 100%; height: 100%; background-color: #eee; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      src: 表示したい3Dモデル(glbファイル)へのパス
+      ios-src: iOSのAR機能で使うusdzファイルへのパス（任意）
+    -->
+    <model-viewer 
+        src="model.glb" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        poster="poster.webp" 
+        shadow-intensity="1" 
+        auto-rotate>
+    </model-viewer>
+
+</body>
+</html>
